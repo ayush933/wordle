@@ -6,14 +6,11 @@
 #include <utility>
 #include <vector>
 
+#include "words.hpp"
 #include <ftxui/component/component.hpp>
 #include <ftxui/component/event.hpp>
 #include <ftxui/component/screen_interactive.hpp>
 #include <ftxui/dom/elements.hpp>
-#include <ftxui/dom/node.hpp>
-#include <ftxui/screen/color.hpp>
-#include <ftxui/screen/screen.hpp>
-#include <words.hpp>
 
 class Grid
 {
@@ -30,7 +27,7 @@ class Grid
     }
     // 2nd pass for Yellow
     for (int x = 0; x < 5; x++) {
-      if (clrs[cur_idx][x] or colored.contains(strs[cur_idx][x])) continue;
+      if (clrs[cur_idx][x] or colored.count(strs[cur_idx][x])) continue;
       for (int y = 0; y < 5; y++) {
         if (word[y] == strs[cur_idx][x]) {
           clrs[cur_idx][x] = 2;

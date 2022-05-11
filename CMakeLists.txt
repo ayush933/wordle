@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.23)
+cmake_minimum_required (VERSION 3.11)
 
 set(CMAKE_CXX_STANDARD 20)
  
@@ -25,10 +25,5 @@ project(wordle
 )
  
 add_executable(wordle src/main.cpp)
-target_include_directories(wordle PRIVATE src)
  
-target_link_libraries(wordle
-  PRIVATE ftxui::screen
-  PRIVATE ftxui::dom
-  PRIVATE ftxui::component 
-)
+target_link_libraries(wordle PRIVATE ftxui::component)
