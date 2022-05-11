@@ -108,10 +108,10 @@ int main()
             back_clr = bgcolor(Color::DarkGoldenrod);
           else
             back_clr = bgcolor(Color::GrayDark);
-          child |= back_clr;
+          child = child | back_clr;
         }
 
-        child |= border;
+        child = child | border;
         row.push_back(child);
       }
 
@@ -132,7 +132,7 @@ int main()
         txt_clr = color(Color::Green);
       else
         txt_clr = color(Color::Red);
-      child |= txt_clr;
+      child = child | txt_clr;
       children.push_back(child);
       if (state.end == 2) children.push_back(text("ANSWER=" + state.word) | bold | center | color(Color::Magenta));
       screen.ExitLoopClosure()();
