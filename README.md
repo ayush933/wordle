@@ -11,7 +11,7 @@ Colors:
 
 This game is made using [FTXUI](https://github.com/ArthurSonzogni/ftxui).
 
-Currently works on Linux only.
+Currently works on Linux/MacOS only.
 
 
 ## Build instructions:
